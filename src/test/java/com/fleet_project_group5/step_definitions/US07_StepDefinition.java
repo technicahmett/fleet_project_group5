@@ -30,13 +30,27 @@ public class US07_StepDefinition {
     }
     @Then("user should see the all cars")
     public void user_should_see_the_all_cars() {
-        BrowserUtils.verifyTitle("Loading...");
+        BrowserUtils.verifyTitle("All - Car - Entities - System - Car - Entities - System");
 
     }
     @When("user selected all cars button click")
     public void user_selected_all_cars_button_click() {
         us07_page.fleetButton3.click();
+        us07_page.fleetButton3.click();
+
     }
 
 
+    @Then("user should see each cars selected")
+    public void userShouldSeeEachCarsSelected() {
+        us07_page.fleetButton4.click();
+
+    }
+
+
+    @Then("user should see more each cars selected")
+    public void userShouldSeeMoreEachCarsSelected() {
+        us07_page.fleetButton5.click();
+    }
 }
+

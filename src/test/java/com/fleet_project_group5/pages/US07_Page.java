@@ -13,7 +13,22 @@ public US07_Page() {
 }
 
 @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/a/span")
-    public WebElement searchButton;
+    public WebElement fleetButton;
+
+
 @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/div/div/ul/li[3]/a/span")
-    public WebElement searchButton2;
+    public WebElement fleetButton2;
+
+
+@FindBy(xpath = "//div[@class='btn-group dropdown']//input[@type='checkbox']")
+    public WebElement fleetButton3;
+
+@FindBy(xpath = "//tr[@class='grid-row row-click-action']//input[@type='checkbox']")
+    public WebElement fleetButton4;
+
+@FindBy(xpath = "//tr[@class='grid-row row-click-action row-selected']//input[@type='checkbox']")
+    public WebElement fleetButton5;
+
+
+
 }

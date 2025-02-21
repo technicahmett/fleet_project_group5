@@ -49,8 +49,10 @@ public class Hooks {
 
 
 
-        BrowserUtils.sleep(2);
+       BrowserUtils.sleep(2);
         Driver.closeDriver();
+
+
 
     }
 
