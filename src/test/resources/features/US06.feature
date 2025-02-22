@@ -1,11 +1,12 @@
 Feature: Users can see edit car info icons
   User Story:
   As a user, I want to see edit car info icons from the Vehicle page.
+  Accounts are: truck driver, store manager, sales manager
 
   Background: User is already in the log in page
-    Given the user is on the login page
+    Given the user on the login page
 
-  @driver
+  @driver1 @smoke
   Scenario:  Verify see “view, edit, delete” options as Driver
     Given the user logged in as "driver"
     When user goto Fleet Button
