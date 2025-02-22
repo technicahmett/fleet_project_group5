@@ -4,7 +4,7 @@ Feature: Users can see edit car info icons
   Accounts are: truck driver, store manager, sales manager
 
   Background: User is already in the log in page
-    Given the user on the login page
+    Given the user is on the login page
 
   @driver1 @smoke
   Scenario:  Verify see “view, edit, delete” options as Driver
