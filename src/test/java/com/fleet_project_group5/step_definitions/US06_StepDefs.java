@@ -22,7 +22,10 @@ public class US06_StepDefs {
 
     @And("user clicks Vehicles Button")
     public void userClicksVehiclesButton() {
-//        page.vehicles.click();
+        BrowserUtils.sleep(3);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(page.vehicles).click().perform();
+
     }
 
     @Then("user goto three dots")
