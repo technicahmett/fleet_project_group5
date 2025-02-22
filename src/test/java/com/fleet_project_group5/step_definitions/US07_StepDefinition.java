@@ -1,6 +1,7 @@
 package com.fleet_project_group5.step_definitions;
 
 import com.fleet_project_group5.pages.US07_Page;
+import com.fleet_project_group5.pages.Us07_pageExpect;
 import com.fleet_project_group5.utilities.BrowserUtils;
 import com.fleet_project_group5.utilities.Driver;
 import io.cucumber.java.en.Then;
@@ -28,29 +29,41 @@ public class US07_StepDefinition {
 
 
     }
+
+     @When("user selected all cars button click")
+       public void user_selected_all_cars_button_click () {
+           us07_page.fleetButton3.click();
+           us07_page.fleetButton3.click();
+
+       }
+
+
+       @Then("user should see each cars selected")
+       public void userShouldSeeEachCarsSelected () {
+           us07_page.fleetButton4.click();
+
+       }
+
+
+       @Then("user should see more each cars selected")
+       public void userShouldSeeMoreEachCarsSelected () {
+           us07_page.fleetButton5.click();
+
+       }
+
     @Then("user should see the all cars")
     public void user_should_see_the_all_cars() {
-        BrowserUtils.verifyTitle("All - Car - Entities - System - Car - Entities - System");
 
-    }
-    @When("user selected all cars button click")
-    public void user_selected_all_cars_button_click() {
-        us07_page.fleetButton3.click();
-        us07_page.fleetButton3.click();
-
+        BrowserUtils.verifyTitle("All Cars");
     }
 
 
-    @Then("user should see each cars selected")
-    public void userShouldSeeEachCarsSelected() {
-        us07_page.fleetButton4.click();
-
-    }
-
-
-    @Then("user should see more each cars selected")
-    public void userShouldSeeMoreEachCarsSelected() {
-        us07_page.fleetButton5.click();
+    Us07_pageExpect us07_pageExpect = new Us07_pageExpect();
+    @Then("user should see the {string}")
+    public void userShouldSeeThe(String expectedTitle) {
+        String actualTitle = us07_pageExpect.expected2.getText();
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
+
 

@@ -14,9 +14,10 @@ select any vehicle from the Vehicle page(web table)
     When user enters  fleet management page
     And user enters inside Vehicles module
     And user selected all cars button click
-    Then user should see the all cars
+    Then user should see the "All Cars"
     Then user should see each cars selected
     Then user should see more each cars selected
+
 
   @vip
   Scenario: Verify login with different user types
@@ -25,9 +26,10 @@ select any vehicle from the Vehicle page(web table)
     When user enters  fleet management page
     And user enters inside Vehicles module
     And user selected all cars button click
-    Then user should see the all cars
+    Then user should see the "All Cars"
     Then user should see each cars selected
     Then user should see more each cars selected
+
 
 
 
