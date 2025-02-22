@@ -1,15 +1,10 @@
 package com.fleet_project_group5.step_definitions;
 
 import com.fleet_project_group5.pages.US07_Page;
-import com.fleet_project_group5.pages.Us07_pageExpect;
 import com.fleet_project_group5.utilities.BrowserUtils;
-import com.fleet_project_group5.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
-
-import java.util.List;
 
 public class US07_StepDefinition {
 
@@ -58,10 +53,10 @@ public class US07_StepDefinition {
     }
 
 
-    Us07_pageExpect us07_pageExpect = new Us07_pageExpect();
+
     @Then("user should see the {string}")
     public void userShouldSeeThe(String expectedTitle) {
-        String actualTitle = us07_pageExpect.expected2.getText();
+        String actualTitle = us07_page.expected2.getText();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
