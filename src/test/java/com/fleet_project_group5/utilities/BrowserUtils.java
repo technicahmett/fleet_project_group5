@@ -22,7 +22,7 @@ public class BrowserUtils {
     Arg: int second
      */
     public static void sleep(int second){
-        second *= 1000;
+        second *= 2;
         try{
             Thread.sleep(second);
         }catch (InterruptedException e){
