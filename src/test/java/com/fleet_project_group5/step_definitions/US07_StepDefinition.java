@@ -13,13 +13,13 @@ public class US07_StepDefinition {
 
     @When("user enters  fleet management page")
     public void user_enters_fleet_management_page() {
-      //us07_page.fleetButton.click();
+      us07_page.fleetButton.click();
 
 
     }
     @When("user enters inside Vehicles module")
     public void user_enters_inside_vehicles_module() {
-       // us07_page.fleetButton2.click();
+        us07_page.fleetButton2.click();
 
 
     }
@@ -30,6 +30,7 @@ public class US07_StepDefinition {
            us07_page.fleetButton3.click();
 
        }
+
 
 
        @Then("user should see each cars selected")
@@ -52,11 +53,7 @@ public class US07_StepDefinition {
     }
 
 
-    @When("user selected all cars button click")
-    public void user_selected_all_cars_button_click() {
 
-        //us07_page.fleetButton3.click();
-    }
 
 
 

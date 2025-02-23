@@ -12,11 +12,11 @@ public class US07_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/a/span")
+    @FindBy(xpath = "(//div[@id='main-menu']//span[@class='title title-level-1'])[2]")
     public WebElement fleetButton;
 
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/div/div/ul/li[3]/a/span")
+    @FindBy(xpath = "(//li[@class='dropdown-menu-single-item first'])[2]")
     public WebElement fleetButton2;
 
 
