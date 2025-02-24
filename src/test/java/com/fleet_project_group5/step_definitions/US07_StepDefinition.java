@@ -31,31 +31,20 @@ public class US07_StepDefinition {
 
        }
 
-
-
        @Then("user should see each cars selected")
        public void userShouldSeeEachCarsSelected () {
            us07_page.fleetButton4.click();
-
-       }
-
-
-       @Then("user should see more each cars selected")
-       public void userShouldSeeMoreEachCarsSelected () {
            us07_page.fleetButton5.click();
+           us07_page.fleetButton6.click();
 
        }
+
 
     @Then("user should see the all cars")
     public void user_should_see_the_all_cars() {
 
         BrowserUtils.verifyTitle("All Cars");
     }
-
-
-
-
-
 
 
     @Then("user should see the {string}")
