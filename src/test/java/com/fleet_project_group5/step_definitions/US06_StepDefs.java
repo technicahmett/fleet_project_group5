@@ -15,10 +15,14 @@ public class US06_StepDefs {
 
     @When("user goto Fleet Button")
     public void userGotoFleetButton() {
-        BrowserUtils.sleep(3);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(page.fleet).perform();
+        page.fleetButtonForDriver.click();
     }
+
+    @When("user SM goto Fleet Button")
+    public void userSmGotoFleetButton() {
+        page.fleetButtonForSM.click();   }
+
+
 
     @And("user clicks Vehicles Button")
     public void userClicksVehiclesButton() {

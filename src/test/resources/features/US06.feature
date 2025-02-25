@@ -6,23 +6,24 @@ Feature: Users can see edit car info icons
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @driver1
+
+  @driver06
   Scenario:  Verify see “view, edit, delete” options as Driver
     Given the user logged in as "driver"
     When user goto Fleet Button
     And user clicks Vehicles Button
     Then user goto three dots
 
-  @salesManager
+  @salesManager06
   Scenario:  Verify see “view, edit, delete” options as Driver
     Given the user logged in as "sales manager"
-    When user goto Fleet Button
+    When user SM goto Fleet Button
     And user clicks Vehicles Button
     Then user goto three dots
 
-  @storeManager
+  @storeManager06
   Scenario:  Verify see “view, edit, delete” options as Driver
     Given the user logged in as "store manager"
-    When user goto Fleet Button
+    When user SM goto Fleet Button
     And user clicks Vehicles Button
     Then user goto three dots
