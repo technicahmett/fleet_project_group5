@@ -13,15 +13,18 @@ import org.openqa.selenium.interactions.Actions;
 public class US06_StepDefs {
     US06_Page page = new US06_Page();
 
-    @When("user goto Fleet Button")
-    public void userGotoFleetButton() {
-        page.fleetButtonForDriver.click();
+
+
+    @When("user goto Fleet Button as {string}")
+    public void userGotoFleetButtonAs(String userType) {
+        if (userType.equalsIgnoreCase("driver")) {
+            page.fleetButtonForDriver.click();
+        } else if (userType.equalsIgnoreCase("sales manager")) {
+            page.fleetButtonForSM.click();
+        } else if (userType.equalsIgnoreCase("store manager")) {
+            page.fleetButtonForSM.click();
+        }
     }
-
-    @When("user SM goto Fleet Button")
-    public void userSmGotoFleetButton() {
-        page.fleetButtonForSM.click();   }
-
 
 
     @And("user clicks Vehicles Button")
