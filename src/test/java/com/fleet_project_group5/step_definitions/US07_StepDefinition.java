@@ -52,15 +52,6 @@ public class US07_StepDefinition {
     }
 
 
-    @When("user selected all cars button click")
-    public void user_selected_all_cars_button_click() {
-
-        //us07_page.fleetButton3.click();
-    }
-
-
-
-
     @Then("user should see the {string}")
     public void userShouldSeeThe(String expectedTitle) {
         String actualTitle = us07_page.expected2.getText();
