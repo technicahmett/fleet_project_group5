@@ -1,43 +1,38 @@
 package com.fleet_project_group5.pages;
 
-import com.fleet_project_group5.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+public class All_CarsPage extends BasePage{
 
-public class US07_Page {
-    public US07_Page() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
 
-    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
+    @FindBy(xpath = "(//li[@class='dropdown dropdown-level-1']//span[@class='title title-level-1'])[1]")
     public WebElement fleetButton;
 
 
     @FindBy(xpath = "(//li[@class='dropdown-menu-single-item first'])[2]")
-    public WebElement fleetButton2;
+    public WebElement vehicleButton;
 
 
     @FindBy(xpath = "//div[@class='btn-group dropdown']//input[@type='checkbox']")
-    public WebElement fleetButton3;
+    public WebElement allCarsChooseButton;
+
 
     @FindBy(xpath = "//tr[@class='grid-row row-click-action']//input[@type='checkbox']")
-    public WebElement fleetButton4;
+    public WebElement allCarsChooseEachButton;
 
     @FindBy(xpath = "(//input[@tabindex='-1'])[4]")
-    public WebElement fleetButton5;
+    public WebElement allCarsChooseEachButton1;
 
     @FindBy(xpath = "(//input[@tabindex='-1'])[8]")
-    public WebElement fleetButton6;
+    public WebElement allCarsChooseEachButton2;
 
 
     @FindBy(xpath = "//span[@class='title title-level-1']")
-    public WebElement expected;
+    public WebElement allCars;
 
     @FindBy(xpath = "//h1[@class='oro-subtitle']")
-    public WebElement expected2;
+    public WebElement allCarsTitle;
 
 
 }
