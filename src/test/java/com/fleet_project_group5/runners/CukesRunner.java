@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/fleet_project_group5/step_definitions",
         dryRun = false,
 
-        tags = "@storeManager06"
+        tags = "@wip06"
 
        // publish = true //generating a report with public link
 )
