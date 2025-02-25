@@ -11,8 +11,14 @@ public class US06_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "(//a[@class='unclickable'])[1]")
-    public WebElement fleet;
+
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[1]")
+    public WebElement fleetButtonForDriver;
+
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
+    public WebElement fleetButtonForSM;
+
+
 
     @FindBy (xpath = "//span[.='Vehicles']")
     public WebElement vehicles;
