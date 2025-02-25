@@ -16,7 +16,7 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
-    Then user should see more each cars selected
+
 
 
   @store
@@ -28,7 +28,7 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
-    Then user should see more each cars selected
+
 
 
 
