@@ -38,6 +38,12 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+    @FindBy(xpath = "//li[@class='dropdown dropdown-level-1'][1]")
+    public WebElement fleetButton;
+
+    //vehicles
+
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
