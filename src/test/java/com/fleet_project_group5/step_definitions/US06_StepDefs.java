@@ -13,8 +13,6 @@ import org.openqa.selenium.interactions.Actions;
 public class US06_StepDefs {
     US06_Page page = new US06_Page();
 
-
-
     @When("user goto Fleet Button as {string}")
     public void userGotoFleetButtonAs(String userType) {
         if (userType.equalsIgnoreCase("driver")) {
@@ -26,17 +24,20 @@ public class US06_StepDefs {
         }
     }
 
-
     @And("user clicks Vehicles Button")
     public void userClicksVehiclesButton() {
-        BrowserUtils.sleep(3);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(page.vehicles).click().perform();
-
+        //BrowserUtils.sleep(3);
+        page.vehicles.click();
     }
 
     @Then("user goto three dots")
     public void userGotoThreeDots() {
-        System.out.println("Run Three dots");
+
+        BrowserUtils.sleep(6);
+        //Actions actions = new Actions(Driver.getDriver());
+        //actions.moveToElement(page.threeDots).click().perform();
+        page.threeDots.click();
     }
+
+
 }
