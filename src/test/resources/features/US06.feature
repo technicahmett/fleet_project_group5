@@ -7,6 +7,7 @@ Feature: Users can see edit car info icons
   Background: User is already in the log in page
     Given the user is on the login page
 
+
   @driver06
   Scenario:  Verify see “view, edit, delete” options as Driver
     Given the user logged in as "driver"

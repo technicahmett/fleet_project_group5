@@ -12,11 +12,11 @@ public class US07_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/a/span")
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
     public WebElement fleetButton;
 
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/div/div/ul/li[3]/a/span")
+    @FindBy(xpath = "(//li[@class='dropdown-menu-single-item first'])[2]")
     public WebElement fleetButton2;
 
 
@@ -26,9 +26,12 @@ public class US07_Page {
     @FindBy(xpath = "//tr[@class='grid-row row-click-action']//input[@type='checkbox']")
     public WebElement fleetButton4;
 
-    @FindBy(xpath = "//tr[@class='grid-row row-click-action row-selected']//input[@type='checkbox']")
-
+    @FindBy(xpath = "(//input[@tabindex='-1'])[4]")
     public WebElement fleetButton5;
+
+    @FindBy(xpath = "(//input[@tabindex='-1'])[8]")
+    public WebElement fleetButton6;
+
 
     @FindBy(xpath = "//span[@class='title title-level-1']")
     public WebElement expected;

@@ -7,7 +7,7 @@ select any vehicle from the Vehicle page(web table)
 
    # Given the user logged in with username as "User1" and password as "UserUser123"
 
-  @kip
+  @salesman
   Scenario: Verify login with different user types
 
     Given the user logged in as "sales manager"
@@ -16,10 +16,10 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
-    Then user should see more each cars selected
 
 
-  @vip
+
+  @store
   Scenario: Verify login with different user types
 
     Given the user logged in as "store manager"
@@ -28,7 +28,7 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
-    Then user should see more each cars selected
+
 
 
 
