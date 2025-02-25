@@ -1,8 +1,6 @@
 package com.fleet_project_group5.step_definitions;
 
 
-
-
 import com.fleet_project_group5.utilities.BrowserUtils;
 import com.fleet_project_group5.utilities.ConfigurationReader;
 import com.fleet_project_group5.utilities.Driver;
@@ -21,8 +19,8 @@ for ALL the SCENARIOS and even STEPS.
 public class Hooks {
 
     //import the @Before coming from io.cucumber.java
-    @Before (order = 1)
-    public void setupMethod(){
+    @Before(order = 1)
+    public void setupMethod() {
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
@@ -30,7 +28,7 @@ public class Hooks {
     }
 
     //@Before (value = "@login", order = 2 )
-    public void login_scenario_before(){
+    public void login_scenario_before() {
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
 
@@ -38,7 +36,7 @@ public class Hooks {
     @After will be executed automatically after EVERY scenario in the project.
      */
     @After
-    public void teardownMethod(Scenario scenario){
+    public void teardownMethod(Scenario scenario) {
 
         if (scenario.isFailed()) {
 
@@ -47,20 +45,19 @@ public class Hooks {
 
         }
 
-
-
         BrowserUtils.sleep(2);
-        Driver.closeDriver();
+
+        //Driver.closeDriver();
 
     }
 
     //@BeforeStep
-    public void setupStep(){
+    public void setupStep() {
         System.out.println("-----> @BeforeSTEP : Running before each step!");
     }
 
     //@AfterStep
-    public void teardownStep(){
+    public void teardownStep() {
         System.out.println("-----> @AfterSTEP : Running after each step!");
     }
 
