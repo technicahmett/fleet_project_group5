@@ -10,20 +10,32 @@ Feature: Users can see edit car info icons
   @driver06
   Scenario:  Verify Driver sees , edit, delete” options
     Given the user logged in as "driver"
-    When user over hover to Fleet Button
+    When user hover over to Fleet Button
     And user clicks Vehicles Button
-    And user over hover to three dots
+    And user hover over to three dots
+    Then user should see three icon on the dropdown
+      | View   |
+      | Edit   |
+      | Delete |
 
   @salesManager06
   Scenario:  Verify Sales Manager sees “view, edit, delete” options
     Given the user logged in as "sales manager"
-    When user over hover to Fleet Button
+    When user hover over to Fleet Button
     And user clicks Vehicles Button
-    And user over hover to three dots
+    And user hover over to three dots
+    Then user should see three icon on the dropdown
+      | View   |
+      | Edit   |
+      | Delete |
 
   @storeManager06
   Scenario:  Verify Store Manager sees “view, edit, delete” options
     Given the user logged in as "store manager"
-    When user over hover to Fleet Button
+    When user hover over to Fleet Button
     And user clicks Vehicles Button
-    And user over hover to three dots
+    And user hover over to three dots
+    Then user should see three icon on the dropdown
+      | View   |
+      | Edit   |
+      | Delete |
