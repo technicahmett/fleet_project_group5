@@ -6,6 +6,7 @@ import com.fleet_project_group5.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,8 +18,8 @@ import static com.fleet_project_group5.utilities.BrowserUtils.*;
 public class US06_StepDefs {
     VehiclesPage page = new VehiclesPage();
 
-    @When("user over hover to Fleet Button")
-    public void userOverHoverToFleetButton() {
+    @When("user hover over to Fleet Button")
+    public void userHoverOverToFleetButton() {
         BrowserUtils.sleep(2);
         hover(page.fleetButton);
     }
@@ -29,18 +30,26 @@ public class US06_StepDefs {
         page.vehicles.click();
     }
 
-    @Then("user over hover to three dots")
-    public void userOverHoverToThreeDots() {
+    @Then("user hover over to three dots")
+    public void userHoverOverToThreeDots() {
 
         BrowserUtils.sleep(3);
         hover(page.threeDots);
 
         //getElementsText(page.threeDots);
-        //List<WebElement> listOfThreeDots=driver
+        List<WebElement> listOfThreeDots=Driver.getDriver().findElements(By.xpath("(//ul[@class='nav nav-pills icons-holder launchers-list'])[1]"));
         System.out.println("---------------------------------");
-        System.out.println("dropdownOptions_as_STRING(page.threeDots) = " + dropdownOptions_as_STRING(page.threeDots));;
 
 
+        for (WebElement each : listOfThreeDots) {
+            System.out.println(each.getText());
+        }
+    }
+    @Then("user should see three icon on the dropdown")
+    public void user_should_see_three_icon_on_the_dropdown(List<String> exceptedList) {
+        List<String> actualMonths = BrowserUtils.dropdownOptions_as_STRING(page.dropdown);
+
+        Assert.assertEquals(exceptedList, actualMonths);
     }
 
 
