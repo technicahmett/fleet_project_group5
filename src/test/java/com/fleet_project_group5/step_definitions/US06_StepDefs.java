@@ -11,13 +11,15 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
+import static com.fleet_project_group5.utilities.BrowserUtils.hover;
+
 public class US06_StepDefs {
     VehiclesPage page = new VehiclesPage();
 
     @When("user over hover to Fleet Button")
     public void userOverHoverToFleetButton() {
         BrowserUtils.sleep(2);
-        page.fleetButton.click();
+        hover(page.fleetButton);
     }
 
     @And("user clicks Vehicles Button")
@@ -30,12 +32,13 @@ public class US06_StepDefs {
     public void userOverHoverToThreeDots() {
 
         BrowserUtils.sleep(3);
-        Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(page.threeDots).perform();
-        BrowserUtils.sleep(6);
+//        Actions actions = new Actions(Driver.getDriver());
+//        actions.moveToElement(page.threeDots).perform();
+//        BrowserUtils.sleep(6);
 
+        hover(page.threeDots);
+        //List<WebElement> listOfThreeDots=driver
 
-       // List<WebElement> listOfThreeDots=
 
 
     }
