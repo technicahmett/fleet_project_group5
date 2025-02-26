@@ -15,11 +15,11 @@ import org.junit.runner.RunWith;
         glue = "com/fleet_project_group5/step_definitions",
         dryRun = false,
 
-        tags="@driver06"
+        tags="@driver06",
         //tags="@salesManager06"
         //tags = "@storeManager06"
 
-        // publish = true //generating a report with public link
+         publish = true //generating a report with public link
 )
 
 public class US06Runner {}
