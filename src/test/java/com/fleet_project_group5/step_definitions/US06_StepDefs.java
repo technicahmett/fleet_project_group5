@@ -47,9 +47,9 @@ public class US06_StepDefs {
     }
     @Then("user should see three icon on the dropdown")
     public void user_should_see_three_icon_on_the_dropdown(List<String> exceptedList) {
-        List<String> actualMonths = BrowserUtils.dropdownOptions_as_STRING(page.dropdown);
+        List<String> actualList = BrowserUtils.dropdownOptions_as_STRING(page.dropdown);
 
-        Assert.assertEquals(exceptedList, actualMonths);
+        Assert.assertEquals(exceptedList, actualList);
     }
 
 
