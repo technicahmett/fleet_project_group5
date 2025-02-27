@@ -46,6 +46,12 @@ public abstract class BasePage {
     public WebElement vehiclesModelButton;
 
     //vehicles
+    @FindBy(xpath = "(//li[@class='dropdown-menu-single-item first'])[2]")
+    public WebElement vehicleButton;
+
+
+
+
 
 
     public BasePage() {
