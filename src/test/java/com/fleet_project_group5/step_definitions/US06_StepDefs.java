@@ -50,7 +50,6 @@ public class US06_StepDefs {
             String itemText = page.threeDots.get(i).getAttribute("title"); // 'title' attribute'u üzerinden öğe ismi
             System.out.println("Dropdown items: " + itemText);
 
-            // Gerçek öğe metnini ve beklenen öğe metnini karşılaştırıyoruz
             Assert.assertTrue("Doesnt Find excepted items: " + itemText, contains(expectedItemsArray, itemText));
         }
 //        Assert.assertEquals(title1, actualTitles.get(0));
