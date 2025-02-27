@@ -18,6 +18,10 @@ public class VehiclesPage extends BasePage {
     //@FindBy(xpath = "(//*[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu'])[1]")
     public WebElement threeDots;
 
+    //alv
+    @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//*[@class='launcher-item']//a")
+
+
     @FindBy(tagName = "dropdown")
     public WebElement dropdown;
 
