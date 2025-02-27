@@ -9,9 +9,6 @@ public class US11_CarOdometerPage extends BasePage{
     public US11_CarOdometerPage() {
     }
 
-
-
-
     @FindBy(xpath = "//input[@value='1']")
     public WebElement defaultPageNumber;
 

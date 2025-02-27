@@ -40,7 +40,6 @@ public class US11_CarOdometer_StepDefs {
     public void user_sees_theViewPerPage_as_by_default(String expectedViewPerPage) {
         String actualViewPerPage = carOdometerPage.viewPerPage.getText();
         Assert.assertEquals(expectedViewPerPage, actualViewPerPage);
-
     }
 
     @Then("user should see the error message")
