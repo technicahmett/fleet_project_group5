@@ -6,12 +6,13 @@ import com.fleet_project_group5.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
-import static com.fleet_project_group5.utilities.BrowserUtils.hover;
+import static com.fleet_project_group5.utilities.BrowserUtils.*;
 
 public class US06_StepDefs {
     VehiclesPage page = new VehiclesPage();
@@ -32,13 +33,12 @@ public class US06_StepDefs {
     public void userOverHoverToThreeDots() {
 
         BrowserUtils.sleep(3);
-//        Actions actions = new Actions(Driver.getDriver());
-//        actions.moveToElement(page.threeDots).perform();
-//        BrowserUtils.sleep(6);
-
         hover(page.threeDots);
-        //List<WebElement> listOfThreeDots=driver
 
+        //getElementsText(page.threeDots);
+        //List<WebElement> listOfThreeDots=driver
+        System.out.println("---------------------------------");
+        System.out.println("dropdownOptions_as_STRING(page.threeDots) = " + dropdownOptions_as_STRING(page.threeDots));;
 
 
     }
