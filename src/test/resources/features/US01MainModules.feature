@@ -7,10 +7,8 @@ Feature: As a user, I should be accessing all the main modules of the app.
   AC #2: Verify that Drivers see 4 module names.
   Expected module names: Fleet, Customers, Activities, System
 
-
   Background: User is already in the log in page
     Given the user is on the login page
-
 
   @storeManager01
   Scenario: Verify Store Managers should sees 8 modules
