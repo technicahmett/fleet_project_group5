@@ -1,29 +1,67 @@
 package com.fleet_project_group5.step_definitions;
 
+import com.fleet_project_group5.pages.BasePage;
+import com.fleet_project_group5.pages.CarOdometerPage;
+import com.fleet_project_group5.pages.VehicleContractPage;
+import com.fleet_project_group5.pages.VehiclesPage;
+import com.fleet_project_group5.utilities.BrowserUtils;
+import com.fleet_project_group5.utilities.Driver;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
-public class US04_StepDefs {
-    @Given("the user is logged in as {string}")
-    public void the_user_is_logged_in_as(String string) {
-        
+import static com.fleet_project_group5.utilities.BrowserUtils.hover;
+
+public class US04_StepDefs  {
+    VehicleContractPage vehicleContractPage = new VehicleContractPage();
+
+    @When("the user hover overs to fleet button")
+    public void the_user_hover_overs_to_fleet_button() {
+        BrowserUtils.sleep(2);
+        hover(vehicleContractPage.fleetButton);
+
+
     }
-    @When("the user navigates to {string}")
-    public void the_user_navigates_to(String string) {
+    @When("the user clicks to  Vehicle Contracts page")
+    public void the_user_clicks_to_vehicle_contracts_page() {
+        BrowserUtils.sleep(2);
+        vehicleContractPage.vehicleContractsButton.click();
+
+
+
+
     }
-    @Then("the page title should be {string}")
-    public void the_page_title_should_be(String string) {
-        
+    @Then("the page title is {string}")
+    public void the_page_title_is(String expectedTitle) {
+      BrowserUtils.verifyTitle(expectedTitle);
+
     }
-    @Then("the user should have access to the Vehicle Contracts page")
-    public void the_user_should_have_access_to_the_vehicle_contracts_page() {
-       
+
+
+    @Then("the URL is {string}")
+    public void theURLIs(String expectedURL) {
+        BrowserUtils.verifyURLContains(expectedURL);
     }
 
     @Then("the user should see an error message {string}")
     public void theUserShouldSeeAnErrorMessage(String arg0) {
-    }
-    @Then("the user should not have access to the Vehicle Contracts page")
-    public void the_user_should_not_have_access_to_the_vehicle_contracts_page() {
+       if (vehicleContractPage.youDoNotHavePermission.isDisplayed()){
+           System.out.println("Yes error is successfuly displayed");
+       }else {
+           System.out.println("No error cannot displayed please check your code");
+       }
+
+
 
     }
+
+
+    @And("the user should not have access to the Vehicle Contracts page")
+    public void theUserShouldNotHaveAccessToTheVehicleContractsPage() {
+    }
 }
+
+
+
+
+
