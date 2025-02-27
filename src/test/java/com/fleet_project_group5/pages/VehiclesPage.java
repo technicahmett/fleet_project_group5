@@ -20,7 +20,6 @@ public class VehiclesPage extends BasePage {
     @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//*[@class='launcher-item']//a")
     public List<WebElement> threeDots;
 
-
     @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//li//a")
     private List<WebElement> dropdownItems;
 
