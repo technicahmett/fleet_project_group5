@@ -17,7 +17,8 @@ import org.junit.runner.RunWith;
 
         tags = "@store",
 
-        publish = true //generating a report with public link
+
+       publish = true //generating a report with public link
 )
 public class CukesRunner {}
 
