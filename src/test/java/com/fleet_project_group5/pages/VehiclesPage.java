@@ -23,15 +23,8 @@ public class VehiclesPage extends BasePage {
     public WebElement allCarsChooseButton;
 
 
-    @FindBy(xpath = "//tr[@class='grid-row row-click-action']//input[@type='checkbox']")
+    @FindBy(xpath = "(//input[@tabindex='-1'])[3]")
     public WebElement eachButton;
-
-    @FindBy(xpath = "(//input[@tabindex='-1'])[4]")
-    public WebElement eachButton1;
-
-    @FindBy(xpath = "(//input[@tabindex='-1'])[8]")
-    public WebElement eachButton2;
-
 
     @FindBy(xpath = "//span[@class='title title-level-1']")
     public WebElement allCars;

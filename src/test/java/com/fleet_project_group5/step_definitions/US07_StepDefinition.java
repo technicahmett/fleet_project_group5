@@ -36,8 +36,7 @@ public class US07_StepDefinition {
        @Then("user should see each cars selected")
        public void userShouldSeeEachCarsSelected () {
            vehiclesPage.eachButton.click();
-           vehiclesPage.eachButton1.click();
-           vehiclesPage.eachButton2.click();
+
 
 
        }
