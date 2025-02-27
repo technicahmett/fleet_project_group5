@@ -13,10 +13,9 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
 
   @storeManager01
-  Scenario: Verify Sales Managers should sees 8 modules
+  Scenario: Verify Store Managers should sees 8 modules
     Given the user logged in as "store manager"
     Then the user should see the following modules:
-      | Module Name        |
       | Dashboards         |
       | Fleet              |
       | Customers          |
@@ -29,9 +28,8 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
   @salesManager01
   Scenario: Verify Sales Managers should sees 8 modules
-    Given the user logged in as "Sales Manager"
+    Given the user logged in as "sales Manager"
     Then the user should see the following modules:
-      | Module Name        |
       | Dashboards         |
       | Fleet              |
       | Customers          |
@@ -43,9 +41,8 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
   @driver01
   Scenario: Verify Drivers should sees 4 modules
-    Given the user logged in as "Driver"
+    Given the user logged in as "driver"
     Then the user should see the following modules:
-      | Module Name |
       | Fleet       |
       | Customers   |
       | Activities  |
