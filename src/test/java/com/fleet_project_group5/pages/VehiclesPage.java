@@ -23,7 +23,7 @@ public class VehiclesPage extends BasePage {
     @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//li//a")
     private List<WebElement> dropdownItems;
 
-    // Dropdown öğelerini alır
+    // Dropdown öğeleri
     public List<WebElement> getDropdownItems() {
         return dropdownItems;
 
