@@ -1,6 +1,7 @@
 package com.fleet_project_group5.step_definitions;
 
 import com.fleet_project_group5.pages.All_CarsPage;
+import com.fleet_project_group5.pages.BasePage;
 import com.fleet_project_group5.pages.VehiclesPage;
 import com.fleet_project_group5.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
@@ -10,31 +11,31 @@ import org.junit.Assert;
 public class US07_StepDefinition {
 
 
-    VehiclesPage vehiclesPage = new VehiclesPage();
+    All_CarsPage allCarsPage = new All_CarsPage();
 
     @When("user enters  fleet management page")
     public void user_enters_fleet_management_page() {
-        vehiclesPage.fleetButton.click();
+        allCarsPage.fleetButton.click();
     }
 
 
     @When("user enters inside Vehicles module")
     public void user_enters_inside_vehicles_module() {
-        vehiclesPage.vehicleButton.click();
+        allCarsPage.vehicleButton.click();
 
 
     }
 
     @When("user selected all cars button click")
     public void user_selected_all_cars_button_click() {
-        vehiclesPage.allCarsChooseButton.click();
-        vehiclesPage.allCarsChooseButton.click();
+        allCarsPage.allCarsChooseButton.click();
+        allCarsPage.allCarsChooseButton.click();
     }
 
 
     @Then("user should see each cars selected")
     public void userShouldSeeEachCarsSelected() {
-        vehiclesPage.eachButton.click();
+        allCarsPage.eachButton.click();
 
 
     }
@@ -55,7 +56,7 @@ public class US07_StepDefinition {
 
     @Then("user should see the {string}")
     public void userShouldSeeThe(String expectedTitle) {
-        String actualTitle = vehiclesPage.allCarsTitle.getText();
+        String actualTitle = allCarsPage.allCarsTitle.getText();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 

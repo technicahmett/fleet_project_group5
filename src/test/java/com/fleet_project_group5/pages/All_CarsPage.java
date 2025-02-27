@@ -4,20 +4,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class All_CarsPage extends BasePage{
-   /*
+
     @FindBy(xpath = "//div[@class='btn-group dropdown']//input[@type='checkbox']")
-    public WebElement allCarsChooseButton;
+    public static WebElement allCarsChooseButton;
 
 
     @FindBy(xpath = "(//input[@tabindex='-1'])[3]")
-    public WebElement eachButton;
+    public static WebElement eachButton;
 
 
     @FindBy(xpath = "//h1[@class='oro-subtitle']")
-    public WebElement allCarsTitle;
+    public static WebElement allCarsTitle;
 
 
-    */
+
 
 
 }
