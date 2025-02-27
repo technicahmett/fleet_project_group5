@@ -20,33 +20,31 @@ public class US07_StepDefinition {
 
     @When("user enters inside Vehicles module")
     public void user_enters_inside_vehicles_module() {
-       vehiclesPage.vehicleButton.click();
+        vehiclesPage.vehicleButton.click();
 
 
     }
 
-     @When("user selected all cars button click")
-       public void user_selected_all_cars_button_click () {
-           vehiclesPage.allCarsChooseButton.click();
-          vehiclesPage .allCarsChooseButton.click();
+    @When("user selected all cars button click")
+    public void user_selected_all_cars_button_click() {
+        vehiclesPage.allCarsChooseButton.click();
+        vehiclesPage.allCarsChooseButton.click();
     }
 
 
-
-       @Then("user should see each cars selected")
-       public void userShouldSeeEachCarsSelected () {
-           vehiclesPage.eachButton.click();
-
+    @Then("user should see each cars selected")
+    public void userShouldSeeEachCarsSelected() {
+        vehiclesPage.eachButton.click();
 
 
-       }
+    }
 
 
-       @Then("user should see more each cars selected")
-       public void userShouldSeeMoreEachCarsSelected () {
+    @Then("user should see more each cars selected")
+    public void userShouldSeeMoreEachCarsSelected() {
 
 
-       }
+    }
 
     @Then("user should see the all cars")
     public void user_should_see_the_all_cars() {
@@ -60,7 +58,6 @@ public class US07_StepDefinition {
         String actualTitle = vehiclesPage.allCarsTitle.getText();
         Assert.assertEquals(actualTitle, expectedTitle);
     }
-
 
 
 }
