@@ -26,8 +26,6 @@ public class VehiclesPage extends BasePage {
     @FindBy(xpath = "(//input[@tabindex='-1'])[3]")
     public WebElement eachButton;
 
-    @FindBy(xpath = "//span[@class='title title-level-1']")
-    public WebElement allCars;
 
     @FindBy(xpath = "//h1[@class='oro-subtitle']")
     public WebElement allCarsTitle;
