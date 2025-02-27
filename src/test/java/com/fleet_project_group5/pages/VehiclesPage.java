@@ -4,32 +4,35 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class VehiclesPage extends BasePage {
 
 
-
-    @FindBy (xpath = "//span[.='Vehicles']")
+    @FindBy(xpath = "//span[.='Vehicles']")
     public WebElement vehicles;
 
 
     //@FindBy (xpath = "(//div[@class='more-bar-holder'])[1]//a[@data-toggle='dropdown']")
     //@FindBy(xpath = "(//a[@data-toggle='dropdown'])[2]")
     //@FindBy(xpath="(//ul[@class='nav nav-pills icons-holder launchers-list'])[1]")
-    @FindBy(xpath = "(//*[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu'])[1]")
-    public WebElement threeDots;
+    //@FindBy(xpath = "(//*[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu'])[1]")
+    @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//*[@class='launcher-item']//a")
+    public List<WebElement> threeDots;
 
-    //All Cars Task
-    @FindBy(xpath = "//div[@class='btn-group dropdown']//input[@type='checkbox']")
-    public WebElement allCarsChooseButton;
+    @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']//li//a")
+    private List<WebElement> dropdownItems;
 
+    // Dropdown öğeleri
+    public List<WebElement> getDropdownItems() {
+        return dropdownItems;
 
-    @FindBy(xpath = "(//input[@tabindex='-1'])[3]")
-    public WebElement eachButton;
+/*
+    @FindBy(tagName = "dropdown")
+    public WebElement dropdown;
 
+*/
+//
 
-    @FindBy(xpath = "//h1[@class='oro-subtitle']")
-    public WebElement allCarsTitle;
-
-
-
+    }
 }
