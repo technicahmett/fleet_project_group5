@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class VehicleContractPage extends BasePage {
+   public VehicleContractPage() {
+
+    }
 
     @FindBy(xpath ="//span[.='Vehicle Contracts']")
     public WebElement vehicleContractsButton;

@@ -13,8 +13,10 @@ Feature: Users can access the Vehicle Contracts page
     Given the user logged in as "store manager"
     When the user hover overs to fleet button
     And the user clicks to  Vehicle Contracts page
+
     Then the page title is "Vehicle Contract - Entities - System - Car - Entities - System"
     Then the URL is "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract"
+
 
 
   @salesManager
@@ -22,8 +24,10 @@ Feature: Users can access the Vehicle Contracts page
     Given the user logged in as "sales manager"
     When the user hover overs to fleet button
     And the user clicks to  Vehicle Contracts page
+
     Then the page title is "Vehicle Contract - Entities - System - Car - Entities - System"
     Then the URL is "https://qa1.vytrack.com/entity/Extend_Entity_VehicleContract"
+
   @driver
   Scenario: Verify that Drivers cannot access the Vehicle Contracts page
     Given the user logged in as "driver"

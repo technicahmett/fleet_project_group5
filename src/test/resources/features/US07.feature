@@ -8,7 +8,7 @@ select any vehicle from the Vehicle page(web table)
    # Given the user logged in with username as "User1" and password as "UserUser123"
 
   @salesman
-  Scenario: Verify login with different user types
+  Scenario: Verify login with different user
 
     Given the user logged in as "sales manager"
     When user enters  fleet management page
@@ -16,6 +16,7 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
+
 
 
 
@@ -28,6 +29,7 @@ select any vehicle from the Vehicle page(web table)
     And user selected all cars button click
     Then user should see the "All Cars"
     Then user should see each cars selected
+
 
 
 
