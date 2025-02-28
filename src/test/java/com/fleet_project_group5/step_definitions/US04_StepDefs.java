@@ -17,29 +17,29 @@ public class US04_StepDefs  {
 
     @When("the user hover overs to fleet button")
     public void the_user_hover_overs_to_fleet_button() {
-        BrowserUtils.sleep(2);
+       vehicleContractPage.waitUntilLoaderScreenDisappear();
         hover(vehicleContractPage.fleetButton);
-
-
     }
     @When("the user clicks to  Vehicle Contracts page")
     public void the_user_clicks_to_vehicle_contracts_page() {
         BrowserUtils.sleep(2);
         vehicleContractPage.vehicleContractsButton.click();
-
-
-
-
+        System.out.println("==============================================");
     }
     @Then("the page title is {string}")
     public void the_page_title_is(String expectedTitle) {
-      BrowserUtils.verifyTitle(expectedTitle);
+        System.out.println("test here ???????????????????????????????????????????");
+        BrowserUtils.sleep(2);
+        System.out.println("Actual title " + Driver.getDriver().getTitle());
+        BrowserUtils.verifyTitle(expectedTitle);
 
     }
 
 
     @Then("the URL is {string}")
     public void theURLIs(String expectedURL) {
+        BrowserUtils.sleep(2);
+        System.out.println("Actual URL " + Driver.getDriver().getCurrentUrl());
         BrowserUtils.verifyURLContains(expectedURL);
     }
 
