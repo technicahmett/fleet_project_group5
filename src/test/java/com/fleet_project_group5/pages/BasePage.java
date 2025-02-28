@@ -45,7 +45,8 @@ public abstract class BasePage {
     @FindBy (xpath = "//span[.='Vehicles Model']")
     public WebElement vehiclesModelButton;
 
-    //vehicles
+    @FindBy(xpath = "//span[.='Vehicle Odometer']")
+    public WebElement VehicleOdometerButton;
 
 
     public BasePage() {
