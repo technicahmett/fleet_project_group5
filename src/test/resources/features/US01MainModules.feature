@@ -1,3 +1,4 @@
+@wip01
 Feature: As a user, I should be accessing all the main modules of the app.
 
   AC #1: Verify that Store and Sales managers see 8 module names.
